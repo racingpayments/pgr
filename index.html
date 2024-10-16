@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horse Racing Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&family=Helvetica+Neue:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .container {
+            background-color: #1C2739;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 600px;
+            color: #FFFFFF;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .header {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-family: 'SF Pro Display', sans-serif;
+            letter-spacing: 1.5px;
+            background: linear-gradient(90deg, #FAFAFA, #D8D8D8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .separator {
+            width: 80%;
+            height: 2px;
+            background-color: #9AA9BF;
+            margin: 8px auto;
+            border-radius: 5px;
+        }
+        .date {
+            font-size: 16px;
+            font-weight: 400;
+            color: #E4E9F0;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+        .time {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #F4D88B;
+        }
+        .race-info {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1B2735;
+            background: linear-gradient(135deg, #F2F6CE, #A0D1F9);
+            padding: 8px 16px;
+            border-radius: 12px;
+            display: inline-block;
+            letter-spacing: 0.8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-shadow: none;
+        }
+        .race-info .horse-name {
+            font-size: 32px;
+            font-weight: 800;
+            font-family: 'SF Pro Display', sans-serif;
+        }
+        .race-info .odds {
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 0;
+            display: block;
+            color: #1B2735;
+        }
+        .info-section {
+            max-width: 600px;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+            color: #1C2739;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .info-section strong {
+            font-weight: 700;
+        }
+        .cta-card {
+            background: #F8F9FA;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 600px;
+            color: #1C2739;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .cta-card .cta-header {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1C2739;
+            font-family: 'SF Pro Display', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .cta-card .cta-subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .cta-button {
+            background: #1C2739;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .cta-button:hover {
+            background-color: #33415C;
+            transform: translateY(-2px);
+        }
+        /* Responsiveness */
+        @media only screen and (max-width: 600px) {
+            .container, .cta-card, .info-section {
+                padding: 20px;
+            }
+            .header {
+                font-size: 34px;
+            }
+            .separator {
+                width: 70%;
+            }
+            .date {
+                font-size: 14px;
+            }
+            .time {
+                font-size: 20px;
+            }
+            .race-info {
+                font-size: 28px;
+                padding: 8px 12px;
+            }
+            .race-info .horse-name {
+                font-size: 28px;
+            }
+            .race-info .odds {
+                font-size: 20px;
+            }
+            .cta-card .cta-header {
+                font-size: 24px;
+            }
+            .cta-card .cta-subtitle {
+                font-size: 16px;
+            }
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="header">10 Jump Horses</div>
+    <div class="separator"></div>
+    <div class="date">Wednesday, 16 October 2024</div>
+    <div class="time">2:08 Worcester</div>
+    <div class="race-info">
+        <span class="horse-name">Law of Supply</span>
+        <span class="odds">9/2 E/W</span>
+    </div>
+</div>
+
+<div class="info-section">
+    <p><strong>What to do with this information:</strong></p>
+    <p>Always make sure to find a bookmaker that offers <strong>Best Odds Guaranteed</strong>. This can significantly boost your returns without any additional risk. If you're placing an each-way bet, it's a good idea to shop around to see if any bookmakers are offering extra bonus places. Betting with just one bookmaker is rarely the best strategy—choosing the best terms is like picking up free money off the floor, you just have to make a little effort to do it.</p>
+    <p><strong>Disclaimer:</strong> PGR does not guarantee results unless explicitly stated.</p>
+</div>
+
+<div class="cta-card">
+    <div class="cta-header">Members Only: Special Bets Promotion</div>
+    <div class="cta-subtitle">Secure 3 Special Bets for the price of 2! This exclusive offer is available for a limited time and only for our valued members. Don’t miss out!</div>
+    <a href="https://pay.sumup.com/b2c/QGB35LCT" class="cta-button">Secure Your Discounted Special Bets</a>
+</div>
+
+</body>
+</html>
